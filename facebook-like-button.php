@@ -133,7 +133,7 @@ function fblb_add_facebook_button( $content ) {
             
             $permalink = get_permalink( $post->ID );	
             
-            $fb_html = '<input type="hidden" value="'.$permalink.'""/><img id="content_fb_like" src="/wp-content/plugins/facebook-like-datenschutz/facebook_like_button.png" alt="Facebook Like" />';
+            $fb_html = '<input type="hidden" value="'.$permalink.'""/><img id="content_fb_like" src="'.plugins_url( 'facebook_like_button.png' , __FILE__ ).'" alt="Facebook Like" />';
             if ( get_option( 'fblb_add_before') )
                 return $fb_html . $content;
             else
